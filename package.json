@@ -1,12 +1,19 @@
 {
   "dependencies": {
-    "cypress": "^13.13.2"
+    "cypress": "^13.13.2",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-xpath": "^2.0.1",
+    "dotenv": "^16.4.5",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "rimraf": "^6.0.1"
   },
   "name": "cypresstestcases",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
+    "generate-report": "npx mochawesome-merge cypress/reports/*.json > cypress/reports/output.json && npx marge cypress/reports/output.json --reportDir cypress/reports --inline",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
