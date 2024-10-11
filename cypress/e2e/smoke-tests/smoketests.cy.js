@@ -12,8 +12,8 @@ describe('SQA Demo tests', () => {
     });
     cy.visit('/');
     cy.get('.btn-signin').click();
-    cy.xpath("//div[@class='email-address-main-div']//input[@type='email']").type('abdulrehman03365@gmail.com');
-    cy.get('input[type="password"]').should('exist').type('Password#1');
+    cy.xpath("//div[@class='email-address-main-div']//input[@type='email']").type('');
+    cy.get('input[type="password"]').should('exist').type('');
     cy.get('.signin-first-div').click() 
 
 
